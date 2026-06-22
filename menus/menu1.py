@@ -10,22 +10,24 @@ class Menu(object):
         print("2-Insertar al final")
         print("3-Buscar")
         print("4-Imprimir")
-        print("5-Salir")
+        print("5-Eliminar el primer numero")
+        print("6-Eliminar el ultimo numero")
+        print("7-Salir")
         
     def opciones(self):
         self.opcion = int(input("Seleccione una opcion: "))
     
         match self.opcion :
             case 1:
-                num=float(input("Inserte el dato a agregar:"))
+                num=int(input("Inserte el dato a agregar:"))
                 self.lista.insert_at_beginning(num)
             
             case 2:
-                num=float(input("Inserte el dato a agregar:"))
+                num=int(input("Inserte el dato a agregar:"))
                 self.lista.insert_at_end(num)
                 
             case 3:
-                num=float(input("Ingrese el dato a buscar:"))
+                num=int(input("Ingrese el dato a buscar:"))
                 encontrado=self.lista.search(num)
                 if encontrado:
                     print(f"Elemento {num} encontrado en la lista")
@@ -35,14 +37,21 @@ class Menu(object):
             case 4:
                 print("La lista completa es:")
                 self.lista.print_list()
-                
+            
             case 5:
+                self.lista.delet_at_beginning()
+                
+            case 6:
+                self.lista.delet_at_end()
+            
+            
+            case 7:
                 print("Saliendo...")
                 
             case _:
                 print("Opción no válida. Intenta de nuevo.")
     
     def ejecutar(self):
-        while self.opcion != 5:
+        while self.opcion != 7:
             self.mostrar_menu()
             self.opciones()

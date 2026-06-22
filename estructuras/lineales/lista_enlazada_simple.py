@@ -51,5 +51,27 @@ class LinkedList:
             print(temp.data,"->", end="")
             temp = temp.next
         print("<- Tail")
-        print("None")
+        
+        
+    def delet_at_beginning(self):
+        if self.head != self.tail:
+            self.head=self.head.next
+        else:
+            self.head= None
+            self.tail=None
+            
+            
+    def delet_at_end(self):
+        if self.head == self.tail:
+            self.head=None
+            self.tail=None
+        else:
+            temp=self.head
+            
+            while temp.next != self.tail:
+                temp = temp.next
+            
+            self.tail=temp
+            self.tail.next= None
+
         
