@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>450</width>
+    <height>350</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Infija a Posfija</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Estilo general del diálogo */
+QDialog {
+    background-color: #f5f5f5;   /* Fondo claro */
+    border: 1px solid #dcdcdc;   /* Borde sutil */
+    border-radius: 8px;          /* Esquinas suaves */
+    color: #333333;              /* Texto neutro */
+}
+
+/* Etiquetas */
+QLabel {
+    color: #444444;              /* Gris oscuro para contraste */
+    padding: 4px;
+}
+
+/* Campos de texto */
+QLineEdit {
+    background-color: #ffffff;   /* Fondo blanco */
+    border: 1px solid #cccccc;   /* Borde suave */
+    border-radius: 4px;
+    padding: 6px;
+    selection-background-color: #87cefa; /* Azul claro al seleccionar */
+    selection-color: #000000;
+}
+
+QLineEdit:focus {
+    border: 1px solid #1a73e8;   /* Azul corporativo al enfocar */
+    background-color: #fafafa;
+}
+
+/* Botones */
+QPushButton {
+    background-color: #1a73e8;   /* Azul profesional */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 14px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #1669c1;   /* Azul más intenso al pasar el cursor */
+}
+
+QPushButton:pressed {
+    background-color: #0d47a1;   /* Azul profundo al presionar */
+}
+
+QPushButton:disabled {
+    background-color: #e0e0e0;   /* Gris claro para deshabilitado */
+    color: #888888;
+}
+</string>
+  </property>
+  <widget class="QLineEdit" name="ent_dato">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>80</y>
+     <width>341</width>
+     <height>71</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_conv">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>170</y>
+     <width>171</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>CONVERSION</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_resultado">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>240</y>
+     <width>341</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>10</y>
+     <width>331</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Ingrese la operacion Infija</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
