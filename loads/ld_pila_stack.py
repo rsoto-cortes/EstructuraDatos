@@ -3,7 +3,6 @@ from PyQt5.QtWidgets import QDialog
 from estructuras.lineales.pila_stack import Stack
 from estructuras.lineales.nodo import Node
 
-
 class Dg_Stack(QDialog):
     def __init__(self):
         super().__init__()
@@ -15,8 +14,8 @@ class Dg_Stack(QDialog):
         self.btn_agr.clicked.connect(self.agre)
         self.btn_elim.clicked.connect(self.elimi)
         self.btn_imp.clicked.connect(self.prin)
-        self.btn_mos.clicked.connect(self.to)
-                
+        self.btn_mos.clicked.connect(self.to)   
+        
         
     def agre(self):
         self.da = self.ent_dato.text().strip()
@@ -38,4 +37,5 @@ class Dg_Stack(QDialog):
 
     def to(self):
         self.lbl_resultado.setText(f"Top-> {self.ag.top_of_stack()}")
+        
         

@@ -55,12 +55,12 @@ class Infija_a_Posfija:
             return 1
         if op in ('*', '/'):
             return 2
-        if op == '^':  # potencia
+        if op == '$':  # potencia
             return 3
         return 0
 
     def definir_operador(self, c):
-        return c in ['+', '-', '*', '/', '^']
+        return c in ['+', '-', '*', '/', '$']
 
     def convercion(self, expression: str) -> str:
         self.output = []  # limpiar salida en cada conversión
@@ -83,3 +83,31 @@ class Infija_a_Posfija:
             self.output.append(self.stack.pop())
 
         return "".join(self.output)
+    
+class Evaluar_Expresion:
+    def __init__(self):
+        self.stack = Stack()
+        self.convertidor = Infija_a_Posfija()  # reutilizamos tu clase
+
+    def aplicar_operacion(self, op, a, b):
+        if op == '+': return a + b
+        if op == '-': return a - b
+        if op == '*': return a * b
+        if op == '/': return a / b
+        if op == '$': return a ** b  # potencia
+
+    def evaluar(self, expresion_infija: str) -> float:
+        # Paso 1: convertir a posfija con tu clase
+        posfija = self.convertidor.convercion(expresion_infija)
+
+        # Paso 2: recorrer la posfija y usar la pila
+        for token in posfija:
+            if token.isdigit():
+                self.stack.push(int(token))
+            else:
+                b = self.stack.pop()
+                a = self.stack.pop()
+                resultado = self.aplicar_operacion(token, a, b)
+                self.stack.push(resultado)
+
+        return self.stack.pop()
