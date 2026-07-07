@@ -2,6 +2,12 @@ import sys
 from PyQt5.QtWidgets import QApplication
 from loads.ld_menu_principal import VentanaPrincipal
 
+#Esto se utilizo para correrlo en la terminal
+"""from menus.menu2 import Menu"""
+   
+"""def main():
+   menu =Menu()
+   menu.ejecutar()"""
 
 def main():
    app = QApplication(sys.argv)
@@ -11,4 +17,4 @@ def main():
 
 
 if __name__ == "__main__":
-   main()
+    main()

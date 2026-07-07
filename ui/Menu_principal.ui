@@ -98,6 +98,7 @@ QStatusBar::item {
      <addaction name="actionLista_Enlazada"/>
      <addaction name="actionPila_o_Stack"/>
      <addaction name="actionInfija_a_Posfija"/>
+     <addaction name="actionQueue"/>
     </widget>
     <addaction name="menuLineales"/>
     <addaction name="separator"/>
@@ -124,6 +125,11 @@ QStatusBar::item {
   <action name="actionInfija_a_Posfija">
    <property name="text">
     <string>Infija a Posfija</string>
+   </property>
+  </action>
+  <action name="actionQueue">
+   <property name="text">
+    <string>Queue</string>
    </property>
   </action>
  </widget>
