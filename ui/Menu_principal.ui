@@ -97,14 +97,21 @@ QStatusBar::item {
      </property>
      <addaction name="actionLista_Enlazada"/>
      <addaction name="actionPila_o_Stack"/>
-     <addaction name="actionInfija_a_Posfija"/>
      <addaction name="actionQueue"/>
     </widget>
     <addaction name="menuLineales"/>
     <addaction name="separator"/>
     <addaction name="actionSalir"/>
    </widget>
+   <widget class="QMenu" name="menuAplicaciones">
+    <property name="title">
+     <string>Aplicaciones</string>
+    </property>
+    <addaction name="actionInfija_a_Posfija_2"/>
+    <addaction name="actionSis_Banco"/>
+   </widget>
    <addaction name="menuEstructuras"/>
+   <addaction name="menuAplicaciones"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionSalir">
@@ -122,7 +129,7 @@ QStatusBar::item {
     <string>Pila o Stack</string>
    </property>
   </action>
-  <action name="actionInfija_a_Posfija">
+  <action name="action">
    <property name="text">
     <string>Infija a Posfija</string>
    </property>
@@ -130,6 +137,21 @@ QStatusBar::item {
   <action name="actionQueue">
    <property name="text">
     <string>Queue</string>
+   </property>
+  </action>
+  <action name="actionInfija_a_Posfija_2">
+   <property name="text">
+    <string>Infija a Posfija</string>
+   </property>
+  </action>
+  <action name="actionQueue_2">
+   <property name="text">
+    <string>Queue</string>
+   </property>
+  </action>
+  <action name="actionSis_Banco">
+   <property name="text">
+    <string>Sistema de Banco</string>
    </property>
   </action>
  </widget>

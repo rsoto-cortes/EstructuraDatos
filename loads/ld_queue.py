@@ -1,6 +1,6 @@
 from PyQt5 import uic
 from PyQt5.QtWidgets import QDialog
-from estructuras.queue import Queue
+from estructuras.uso_queue.queue import Queue
 
 class Dg_queue(QDialog):
     def __init__(self):
