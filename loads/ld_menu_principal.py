@@ -5,6 +5,7 @@ from loads.ld_pila_stack import Dg_Stack
 from loads.ld_enfija_posfija import Dg_inf_pos
 from loads.ld_queue import Dg_queue
 from loads.ld_banco import DgBanco
+from loads.ld_sist_impresion import DgImpresion
 
 class VentanaPrincipal(QMainWindow):
     def __init__(self):
@@ -16,6 +17,7 @@ class VentanaPrincipal(QMainWindow):
         self.actionInfija_a_Posfija_2.triggered.connect(self.abrir_inf_posf)
         self.actionQueue.triggered.connect(self.abrir_queue)
         self.actionSis_Banco.triggered.connect(self.abrir_banco)
+        self.actionSis_Impresion.triggered.connect(self.abrir_impresion)
         self.actionSalir.triggered.connect(self.close)
         
     def abrirlista_simple(self):
@@ -35,5 +37,9 @@ class VentanaPrincipal(QMainWindow):
         dialogo.exec_()
         
     def abrir_banco(self):
-        dialogo=DgBanco()
-        dialogo.exec()
+        dialogo = DgBanco()
+        dialogo.exec_()
+        
+    def abrir_impresion(self):
+        dialogo = DgImpresion()
+        dialogo.exec_()

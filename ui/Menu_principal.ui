@@ -109,6 +109,7 @@ QStatusBar::item {
     </property>
     <addaction name="actionInfija_a_Posfija_2"/>
     <addaction name="actionSis_Banco"/>
+    <addaction name="actionSis_Impresion"/>
    </widget>
    <addaction name="menuEstructuras"/>
    <addaction name="menuAplicaciones"/>
@@ -152,6 +153,11 @@ QStatusBar::item {
   <action name="actionSis_Banco">
    <property name="text">
     <string>Sistema de Banco</string>
+   </property>
+  </action>
+  <action name="actionSis_Impresion">
+   <property name="text">
+    <string>Sistema de Impresion</string>
    </property>
   </action>
  </widget>
