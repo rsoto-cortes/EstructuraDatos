@@ -22,7 +22,38 @@ def main():
 if __name__ == "__main__":
     main()
 """
-#Este main se encarga de mostrar la ventana principal con los proyectos de estructura lineal
+
+#prueba de arbol binario
+from menus.menu_btr import menu
+
+"""tree = BinaryTree()
+tree.insertar(50)
+tree.insertar(30)
+tree.insertar(70)
+tree.insertar(20)
+tree.insertar(40)
+tree.insertar(60)
+tree.insertar(80)
+
+print ("Preorden: ")
+tree.preorden()
+
+print ("Inorden: ")
+tree.inorden()
+
+print("Posorden: ")
+tree.posorden()
+
+print(tree.buscar(60))
+print(tree.buscar(25))"""
+
+#menu de arbol binario
+
+def main():
+    menu= menu()
+    menu.ejecutar()
+
+"""#Este main se encarga de mostrar la ventana principal con los proyectos de estructura lineal
 
 def main():
    app = QApplication(sys.argv)
@@ -33,3 +64,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+"""
